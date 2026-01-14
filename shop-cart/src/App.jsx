@@ -1,4 +1,4 @@
-import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import { Routes, Route, Link, HashRouter } from "react-router-dom";
 import Products from "./components/Products";
 import ProductDetails from "./components/ProductDetails";
 import Cart from "./pages/Cart";
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     <NavBarD/>
-      <BrowserRouter>
+      <HashRouter>
       <Routes>
         <Route path="/" element={<Products />} />
         <Route path="/product/:id" element={<ProductDetails />} />
@@ -27,7 +27,7 @@ function App() {
              } />
           
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </>
   
   );
